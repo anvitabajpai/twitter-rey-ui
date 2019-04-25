@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const title = 'My Minimal React Webpack Babel Setup for Twitter';
+import { Provider } from 'react-redux';
+import './css/index.css';
+import Routes from './Routes';
+import {store} from './containers/SearchSPA/store'
+const rootEl = document.getElementById('app');
 
 ReactDOM.render(
-<div>{title}</div>,
-document.getElementById('app')
+  <Provider store={store}>
+      <div>
+          <Routes />
+      </div>
+  </Provider>,
+  rootEl,
 );
-
-module.hot.accept();
+if (module.hot) {
+    module.hot.accept();
+}
