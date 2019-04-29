@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import SearchSPA from "./containers/SearchSPA/index";
+import LoginSPA from "./containers/LoginSPA/index";
 
 class Main extends Component {
 
@@ -14,7 +14,7 @@ class Main extends Component {
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <HashRouter>
               <div className="content">
-                <Route  exact path="/" component={SearchSPA} />
+                <Route  exact path="/" component={LoginSPA} />
               </div>
           </HashRouter>
         </MuiThemeProvider>
