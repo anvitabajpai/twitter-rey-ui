@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import '../css/index.css'
 import { connect } from 'react-redux';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Comment from '@material-ui/icons/Comment';
+import Forum from '@material-ui/icons/Forum';
 import renderAdornedTextField from '../components/core/TextfieldAdorned';
 import InputAdornments from '../components/core/InputAdornments';
 import Divider from '@material-ui/core/Divider';
@@ -123,8 +123,8 @@ class LoginSPAContent extends Component {
                     <Grid container
                           alignItems="center"
                           justify="center">
-                          <Comment style={{ fontSize: 30 }} />
-                        <b>ReyTweet</b>
+                          <Forum style={{ fontSize: 30 }} />
+                        <b>TweetForum</b>
                     </Grid>
 
                     {/*<br/>*/}
