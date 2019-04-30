@@ -10,6 +10,7 @@ const styles = theme => ({
     },
     textField: {
         flexBasis: 200,
+        width:240
     },
     icon:{
         paddingRight : 10,
@@ -23,6 +24,7 @@ const renderAdornedTextField = (
     <TextField
         id="input-with-icon-textfield"
         label={label}
+        className={classes.textField}
         InputProps={{
             endAdornment: (
                 <InputAdornment position="end" className={classes.icon}>

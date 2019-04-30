@@ -127,33 +127,83 @@ class LoginSPAContent extends Component {
             return (
                 <form onSubmit={handleSubmit} className="hide-submit">
                     <MuiThemeProvider theme={theme}>
-                    <Grid><Divider /></Grid>
                     <Grid container
                           alignItems="center"
                           justify="center">
-                        <Grid item sm={1} md={1} >
+                        <Grid item xs={10} sm={6} md={6} lg={4}>
+                            <Divider/>
+                        </Grid>
+                    </Grid>
+
+                    <Grid container
+                          alignItems="center"
+                          justify="center">
+                        <Grid sm={1} md={1} lg={1}>
                         </Grid>
                         <Grid item xs={5} sm={5} md={3} lg={2}>
                             <br/><br/>
+
                             <Field name="username" component={renderAdornedTextField} icon={<AccountCircle color="action" />} label="Username *" />
                             <Field name="password" component={InputAdornments} label="Password *" />
+
                             <br/><br/>
+
                             <Button variant="contained">Login</Button>
+
                         </Grid>
-                        <Grid item xs={2} sm={1} md={1} lg={1}>
+                        <Grid xs={4} sm={1} md={1} lg={1}>
                         </Grid>
-                        <Grid item xs={5} sm={5} md={3} lg={3}>
-                            <GoogleButton  color="#db3236" text="Connect with Google">
-                                <GoogleIcon className={styles.rightIcon} />
-                            </GoogleButton>
-                            <br/>
-                            <br/>
-                            <FacebookButton  color="#4267b2" text="Connect with Facebook">
-                                <FacebookIcon className={styles.rightIcon} />
-                            </FacebookButton>
+                    </Grid>
+
+                    <br/><br/>
+
+                    <Grid container
+                              alignItems="center"
+                              justify="center">
+                         <Grid item xs={5} sm={3} md={3} lg={2}>
+                                <Divider/>
+                         </Grid>
+
+                        <Grid item>
+                            OR
                         </Grid>
-                        <Grid item xs={2} sm={1} md={1} lg={1}>
+
+                        <Grid item xs={5} sm={3} md={3} lg={2}>
+                            <Divider/>
                         </Grid>
+                    </Grid>
+
+                    <br/><br/>
+
+                    <Grid container
+                              alignItems="center"
+                              justify="center">
+                          <Grid sm={1} md={1} lg={1}>
+                          </Grid>
+                          <Grid item xs={5} sm={5} md={3} lg={2}>
+
+                                <GoogleButton  color="#db3236" text="Connect with Google">
+                                    <GoogleIcon className={styles.rightIcon} />
+                                </GoogleButton>
+
+                                <br/><br/>
+
+                                <FacebookButton  color="#4267b2" text="Connect with Facebook">
+                                    <FacebookIcon className={styles.rightIcon} />
+                                </FacebookButton>
+                          </Grid>
+                          <Grid xs={4} sm={1} md={1} lg={1}>
+                          </Grid>
+                    </Grid>
+
+                    <br/><br/>
+
+                    <Grid container
+                              alignItems="center"
+                              justify="center">
+                         <Grid item xs={10} sm={6} md={6} lg={4}>
+                                <Divider/>
+                         </Grid>
                     </Grid>
                     </MuiThemeProvider>
                 </form>

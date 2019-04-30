@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'wrap',
     },
     textField: {
-        flexBasis: 210,
+        width:240
     }
 }));
 
@@ -42,7 +42,9 @@ const InputAdornments = (props) =>{
                     id="adornment-password"
                     type={values.showPassword ? 'text' : 'password'}
                     value={values.password}
+                    width={props.width}
                     onChange={handleChange('password')}
+                    className={classNames(classes.textField)}
                     endAdornment={
                         <InputAdornment position="end">
                             <IconButton aria-label="Toggle password visibility" onClick={handleClickShowPassword}>
