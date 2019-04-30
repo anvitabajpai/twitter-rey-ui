@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import '../css/index.css'
-import axios from "axios";
 import { connect } from 'react-redux';
-import * as $C from "../containers/LoginSPA/constants";
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import DeleteIcon from '@material-ui/icons/Delete';
-import SendIcon from '@material-ui/icons/Send';
-import Lock from '@material-ui/icons/Lock';
+import Comment from '@material-ui/icons/Comment';
 import renderAdornedTextField from '../components/core/TextfieldAdorned';
-import { unstable_Box as Box } from '@material-ui/core/Box';
 import InputAdornments from '../components/core/InputAdornments';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import LoginButton from '../components/core/ButtonLogin';
 import GoogleButton from '../components/core/ButtonGoogle';
 import FacebookButton from '../components/core/ButtonFacebook';
 import SvgIcon from '@material-ui/core/SvgIcon';
@@ -120,13 +115,28 @@ class LoginSPAContent extends Component {
         // });
     }
 
-
-
     render() {
             const {handleSubmit} = this.props;
             return (
                 <form onSubmit={handleSubmit} className="hide-submit">
                     <MuiThemeProvider theme={theme}>
+                    <Grid container
+                          alignItems="center"
+                          justify="center">
+                          <Comment style={{ fontSize: 30 }} />
+                        <b>ReyTweet</b>
+                    </Grid>
+
+                    {/*<br/>*/}
+
+                    {/*<Grid container*/}
+                          {/*alignItems="center"*/}
+                          {/*justify="center">*/}
+                          {/*<b>Login or Signup</b>*/}
+                    {/*</Grid>*/}
+
+                    <br/>
+
                     <Grid container
                           alignItems="center"
                           justify="center">
@@ -141,14 +151,15 @@ class LoginSPAContent extends Component {
                         <Grid sm={1} md={1} lg={1}>
                         </Grid>
                         <Grid item xs={5} sm={5} md={3} lg={2}>
-                            <br/><br/>
+                            <br/>
 
                             <Field name="username" component={renderAdornedTextField} icon={<AccountCircle color="action" />} label="Username *" />
                             <Field name="password" component={InputAdornments} label="Password *" />
 
                             <br/><br/>
 
-                            <Button variant="contained">Login</Button>
+                            <LoginButton  color="#db3236" text="Login">
+                            </LoginButton>
 
                         </Grid>
                         <Grid xs={4} sm={1} md={1} lg={1}>
@@ -181,16 +192,9 @@ class LoginSPAContent extends Component {
                           <Grid sm={1} md={1} lg={1}>
                           </Grid>
                           <Grid item xs={5} sm={5} md={3} lg={2}>
-
-                                <GoogleButton  color="#db3236" text="Connect with Google">
-                                    <GoogleIcon className={styles.rightIcon} />
-                                </GoogleButton>
-
+                                <GoogleButton  color="#db3236" text="Sign in with Google"></GoogleButton>
                                 <br/><br/>
-
-                                <FacebookButton  color="#4267b2" text="Connect with Facebook">
-                                    <FacebookIcon className={styles.rightIcon} />
-                                </FacebookButton>
+                                <FacebookButton  color="#4267b2" text="Sign in with Facebook"></FacebookButton>
                           </Grid>
                           <Grid xs={4} sm={1} md={1} lg={1}>
                           </Grid>
