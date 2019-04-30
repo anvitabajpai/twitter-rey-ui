@@ -148,7 +148,7 @@ class LoginSPAContent extends Component {
                     <Grid container
                           alignItems="center"
                           justify="center">
-                        <Grid sm={1} md={1} lg={1}>
+                        <Grid item sm={1} md={1} lg={1}>
                         </Grid>
                         <Grid item xs={5} sm={5} md={3} lg={2}>
                             <br/>
@@ -162,7 +162,7 @@ class LoginSPAContent extends Component {
                             </LoginButton>
 
                         </Grid>
-                        <Grid xs={4} sm={1} md={1} lg={1}>
+                        <Grid item xs={4} sm={1} md={1} lg={1}>
                         </Grid>
                     </Grid>
 
@@ -189,14 +189,14 @@ class LoginSPAContent extends Component {
                     <Grid container
                               alignItems="center"
                               justify="center">
-                          <Grid sm={1} md={1} lg={1}>
+                          <Grid item sm={1} md={1} lg={1}>
                           </Grid>
                           <Grid item xs={5} sm={5} md={3} lg={2}>
                                 <GoogleButton  color="#db3236" text="Sign in with Google"></GoogleButton>
                                 <br/><br/>
                                 <FacebookButton  color="#4267b2" text="Sign in with Facebook"></FacebookButton>
                           </Grid>
-                          <Grid xs={4} sm={1} md={1} lg={1}>
+                          <Grid item xs={4} sm={1} md={1} lg={1}>
                           </Grid>
                     </Grid>
 
