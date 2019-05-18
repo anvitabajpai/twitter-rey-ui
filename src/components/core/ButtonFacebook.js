@@ -21,6 +21,10 @@ const styles = {
         width: 250,
         height: 35,
         padding: '0 30px',
+        "&:hover": {
+            background: '#4267b2',
+            filter: 'brightness(80%)'
+        }
     },
    text: {
         textTransform: 'capitalize',
