@@ -27,7 +27,6 @@ function MediaCard(props) {
                     className={classes.media}
                     square = "true"
                     image='https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg'
-                    title="Contemplative Reptile"
                 />
             </CardActionArea>
         </Card>
