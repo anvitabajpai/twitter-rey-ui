@@ -9,13 +9,13 @@ const styles = {
         borderRadius: 3,
         border: 0,
         color: 'white',
-        width: 250,
+        width: 60,
         height: 35,
-        padding: '0 30px',
         "&:hover": {
             background: 'grey',
             filter: 'brightness(80%)'
-        }
+        },
+        float: 'right'
     },
    text: {
         textTransform: 'capitalize',

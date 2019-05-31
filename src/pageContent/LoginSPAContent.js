@@ -203,8 +203,8 @@ class LoginSPAContent extends Component {
                     <br/><br/>
 
                     <Grid container
-                              alignItems="center"
-                              justify="center">
+                          alignItems="center"
+                          justify="center">
                          <Grid item xs={10} sm={6} md={6} lg={4}>
                                 <Divider/>
                          </Grid>

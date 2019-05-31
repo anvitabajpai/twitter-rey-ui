@@ -6,6 +6,7 @@ import {
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LoginSPA from "./containers/LoginSPA/index";
+import TwitterLandingPageSPAContent from "./pageContent/TwitterLandingPageSPAContent";
 
 class Main extends Component {
 
@@ -14,7 +15,8 @@ class Main extends Component {
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <HashRouter>
               <div className="content">
-                <Route  exact path="/" component={LoginSPA} />
+                <Route  exact path="/login" component={LoginSPA} />
+                <Route  exact path="/landingPage" component={TwitterLandingPageSPAContent} />
               </div>
           </HashRouter>
         </MuiThemeProvider>
