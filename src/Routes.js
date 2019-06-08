@@ -16,7 +16,7 @@ class Main extends Component {
           <HashRouter>
               <div className="content">
                 <Route  exact path="/login" component={LoginSPA} />
-                <Route  exact path="/landingPage" component={TwitterLandingPageSPAContent} />
+                <Route  exact path="/" component={TwitterLandingPageSPAContent} />
               </div>
           </HashRouter>
         </MuiThemeProvider>
