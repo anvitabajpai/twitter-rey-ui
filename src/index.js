@@ -26,7 +26,7 @@ class App extends React.Component {
     }
 }
 
-const AppWithAuth = withAuthenticator(App);
+const AppWithAuth = withAuthenticator(App, {includeGreetings: true});
 
 ReactDOM.render(
     <AppWithAuth/>,
