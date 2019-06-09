@@ -1,0 +1,6 @@
+{
+	"SourceDir": "~/Documents/twitter-rey-ui",
+	"DistributionDir": "~/Documents/twitter-rey-ui/dist",
+	"BuildCommand": "npm run-script build",
+	"StartCommand": "npm run-script start"
+}

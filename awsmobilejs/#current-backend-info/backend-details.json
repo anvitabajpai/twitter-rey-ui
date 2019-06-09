@@ -1,0 +1,133 @@
+{
+	"name": "aws-mobile-project",
+	"projectId": "f7c3b30c-9959-4153-91f7-917c2534e7fb",
+	"region": "us-east-1",
+	"state": "NORMAL",
+	"createdDate": "2019-06-07T23:35:29.596Z",
+	"lastUpdatedDate": "2019-06-07T23:45:43.507Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/f7c3b30c-9959-4153-91f7-917c2534e7fb/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "awsmobileproject_MobileHub",
+			"arn": "6c846105e7e246b3bca4104fafea89d0",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "b63ed00c-d734-4142-92f3-79559faf4a57"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "awsmobileproject_mobileanalytics_MOBILEHUB_938654903",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"role": "awsmobileproject_auth_MOBILEHUB_938654903"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "awsmobileproject_MOBILEHUB_938654903",
+			"arn": "us-east-1:f2cb3027-6ca8-4cec-9abd-dd8457e19a54",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"poolid": "us-east-1:f2cb3027-6ca8-4cec-9abd-dd8457e19a54",
+				"roleARNs": "arn:aws:iam::723847145664:role/awsmobileproject_auth_MOBILEHUB_938654903"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "awsmobileproject_smsverification_MOBILEHUB_938654903",
+			"arn": "arn:aws:iam::723847145664:role/service-role/awsmobileproject_smsverification_MOBILEHUB_938654903",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"user-pools-role-key": "user-pools-execution-role"
+			}
+		},
+		{
+			"type": "AWS::Cognito::UserPool",
+			"name": "awsmobileproject_userpool_MOBILEHUB_938654903",
+			"arn": "us-east-1_TXoyCjSO4",
+			"feature": "user-signin",
+			"attributes": {
+				"alias-attributes": "null",
+				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"mfa-configuration": "OFF",
+				"password-policy": "{\"minimumLength\":8,\"requireUppercase\":true,\"requireLowercase\":true,\"requireNumbers\":true,\"requireSymbols\":true}",
+				"region": "us-east-1",
+				"user-pools-client-id": "4arv6ibol9iefcg7ahqo32f8d9",
+				"user-pools-client-secret": "1633fgvrnucgqfo1udq4vl9j8sodpujgqf010j1lvkpg283q86ec",
+				"user-pools-id": "us-east-1_TXoyCjSO4",
+				"user-pools-web-client-id": "409pvcggacpa856ms47o1s3js7"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "awsmobileproject_auth_MOBILEHUB_938654903",
+			"arn": "arn:aws:iam::723847145664:role/awsmobileproject_auth_MOBILEHUB_938654903",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "awsmobileproject-hosting-mobilehub-938654903",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "b63ed00c-d734-4142-92f3-79559faf4a57",
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/awsmobileproject-hosting-mobilehub-938654903",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/awsmobileproject-hosting-mobilehub-938654903"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d3k8napa8x7eu4.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E13HT7P58I7AD7",
+				"lastUpdateRequestID": "b63ed00c-d734-4142-92f3-79559faf4a57"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "awsmobileproject_hosting_MOBILEHUB_938654903",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"role": "awsmobileproject_auth_MOBILEHUB_938654903"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "awsmobileproject-deployments-mobilehub-938654903",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/awsmobileproject-deployments-mobilehub-938654903"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-east-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}
