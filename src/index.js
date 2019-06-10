@@ -27,7 +27,7 @@ class App extends React.Component {
 }
 
 const federated = {
-    google_client_id: '', // Enter your google_client_id here
+    google_client_id: '157100821509-0njnajfki2nl6noptpf06kd2apsr91kp.apps.googleusercontent.com', // Enter your google_client_id here
     facebook_app_id: '496308751108161', // Enter your facebook_app_id here
     amazon_client_id: '' // Enter your amazon_client_id here
 };
