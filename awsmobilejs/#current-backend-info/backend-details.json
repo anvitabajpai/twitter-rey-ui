@@ -4,7 +4,7 @@
 	"region": "us-east-1",
 	"state": "NORMAL",
 	"createdDate": "2019-06-07T23:35:29.596Z",
-	"lastUpdatedDate": "2019-06-07T23:45:43.507Z",
+	"lastUpdatedDate": "2019-06-09T04:58:08.308Z",
 	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/f7c3b30c-9959-4153-91f7-917c2534e7fb/build",
 	"resources": [
 		{
@@ -23,7 +23,7 @@
 			"feature": "analytics",
 			"attributes": {
 				"authType": "authenticated",
-				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"lastUpdateRequestID": "eb1bf91a-b1ec-4bb2-9c71-8cac230dafd7",
 				"role": "awsmobileproject_auth_MOBILEHUB_938654903"
 			}
 		},
@@ -59,8 +59,8 @@
 				"mfa-configuration": "OFF",
 				"password-policy": "{\"minimumLength\":8,\"requireUppercase\":true,\"requireLowercase\":true,\"requireNumbers\":true,\"requireSymbols\":true}",
 				"region": "us-east-1",
-				"user-pools-client-id": "4arv6ibol9iefcg7ahqo32f8d9",
-				"user-pools-client-secret": "1633fgvrnucgqfo1udq4vl9j8sodpujgqf010j1lvkpg283q86ec",
+				"user-pools-client-id": "...redacted_1644154578...",
+				"user-pools-client-secret": "...redacted_235432902...",
 				"user-pools-id": "us-east-1_TXoyCjSO4",
 				"user-pools-web-client-id": "409pvcggacpa856ms47o1s3js7"
 			}
@@ -104,7 +104,7 @@
 			"feature": "hosting",
 			"attributes": {
 				"authType": "authenticated",
-				"lastUpdateRequestID": "dca6c8e7-b3c2-44c2-b6a3-6df2cce357c9",
+				"lastUpdateRequestID": "eb1bf91a-b1ec-4bb2-9c71-8cac230dafd7",
 				"role": "awsmobileproject_auth_MOBILEHUB_938654903"
 			}
 		},

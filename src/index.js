@@ -26,10 +26,16 @@ class App extends React.Component {
     }
 }
 
+const federated = {
+    google_client_id: '', // Enter your google_client_id here
+    facebook_app_id: '496308751108161', // Enter your facebook_app_id here
+    amazon_client_id: '' // Enter your amazon_client_id here
+};
+
 const AppWithAuth = withAuthenticator(App, {includeGreetings: true});
 
 ReactDOM.render(
-    <AppWithAuth/>,
+    <AppWithAuth federated={federated}/>,
     rootEl,
 );
 

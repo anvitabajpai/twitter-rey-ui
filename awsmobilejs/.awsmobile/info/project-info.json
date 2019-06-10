@@ -1,19 +1,19 @@
 {
 	"ProjectName": "twitter-rey-ui",
-	"ProjectPath": "/Users/anvitabajpai/Documents/twitter-rey-ui",
+	"ProjectPath": "/Users/anvitabajpai/workdir/twitter-rey-ui",
 	"InitializationTime": "2019-06-07-16-36-33",
 	"LastConfigurationTime": "2019-06-07-16-34-29",
 	"LastNPMInstallTime": "",
-	"FrontendLastBuildTime": "2019-06-07-21-33-34",
-	"LastPublishTime": "2019-06-07-21-33-42",
-	"BackendLastSyncTime": "2019-06-07-21-00-11",
-	"BackendLastBuildTime": "",
-	"BackendLastPushTime": "",
+	"FrontendLastBuildTime": "2019-06-08-23-59-27",
+	"LastPublishTime": "2019-06-09-20-51-14",
+	"BackendLastSyncTime": "2019-06-08-21-58-14",
+	"BackendLastBuildTime": "2019-06-08-21-58-07",
+	"BackendLastPushTime": "2019-06-08-21-58-09",
 	"BackendProjectID": "f7c3b30c-9959-4153-91f7-917c2534e7fb",
 	"BackendProjectName": "aws-mobile-project",
 	"BackendProjectConsoleUrl": "https://console.aws.amazon.com/mobilehub/home#/f7c3b30c-9959-4153-91f7-917c2534e7fb/build",
 	"BackendProjectCreationTime": "2019-06-07T23:35:29.596Z",
-	"BackendProjectLastUpdatedTime": "2019-06-07T23:45:43.507Z",
+	"BackendProjectLastUpdatedTime": "2019-06-09T04:58:08.308Z",
 	"Framework": "react",
-	"BackendLastSyncToDevTime": "2019-06-07-21-00-14"
+	"BackendLastSyncToDevTime": "2019-06-08-21-58-14"
 }
