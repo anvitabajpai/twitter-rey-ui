@@ -8,42 +8,50 @@ import {store} from './containers/SearchSPA/store';
 import awsMobile from './aws-exports';
 import { withAuthenticator,  Authenticator, Greetings,  SignIn, SignUp, ConfirmSignIn, VerifyContact, ConfirmSignUp, ForgotPassword, RequireNewPassword, Loading } from "aws-amplify-react";
 
+
 Amplify.configure(awsMobile);
-var userName = '';
-Auth.currentAuthenticatedUser()
-    .then(
-        (user) => {
-            if (user.name != undefined) {
-                userName = user.name;
-                console.log(userName);
-            } else if (user != undefined && user.attributes != undefined && user.attributes.email != undefined) {
-                userName = user.attributes.email;
-                console.log(user.attributes.email);
-            }
-            console.log(user);
-        }
-     ).catch(
-        err => console.log(err)
-     )
 
-
-console.log(Auth.federatedSignIn.name);
-
+var authPromise = Auth.currentAuthenticatedUser();
 
 class App extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
+        this.state = {
+            userName : ''
+        };
     }
+
+    componentWillMount() {
+        let loggedIn = false
+        if (Auth.user) {
+            console.log("user object exists");
+            const {user: {signInUserSession: {accessToken: {payload: {exp, iat}}}}} = Auth;
+            if (iat < exp) {
+                loggedIn = true;
+            }
+            console.log("is logged in", loggedIn);
+        }
+
+        if (loggedIn) {
+            console.log("Redirecting to main page");
+            if (Auth.user.attributes != undefined) {
+                this.setState({userName : Auth.user.attributes.email});
+            } else if (Auth.user.name != undefined){
+                this.setState({userName : Auth.user.name});
+            }
+        }
+    }
+
 
     render() {
         if (this.props.authState == "signedIn") {
             return (
                 <Provider store={store}>
                     <div>
-                        <Greetings
-                            inGreeting={(username) => 'Hi ' + userName}
-                        />
-                        <Routes />
+                         <Greetings
+                                inGreeting={(username) => 'Hi ' + this.state.userName}
+                          />
+                         <Routes />
                     </div>
                 </Provider>
             );
