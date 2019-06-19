@@ -22,27 +22,29 @@ class App extends React.Component {
     }
 
     componentWillMount() {
-        let loggedIn = false
-        if (Auth.user) {
-            console.log("user object exists");
-            const {user: {signInUserSession: {accessToken: {payload: {exp, iat}}}}} = Auth;
-            if (iat < exp) {
-                loggedIn = true;
+        try {
+            let loggedIn = false
+            if (Auth.user) {
+                console.log("user object exists");
+                const {user: {signInUserSession: {accessToken: {payload: {exp, iat}}}}} = Auth;
+                if (iat < exp) {
+                    loggedIn = true;
+                }
+                console.log("is logged in", loggedIn);
             }
-            console.log("is logged in", loggedIn);
-        }
 
-        if (loggedIn) {
-            console.log("Redirecting to main page");
-            try {
+            if (loggedIn) {
+                console.log("Redirecting to main page");
+
                 if (Auth.user.attributes != undefined) {
                     this.setState({userName: Auth.user.attributes.email});
                 } else if (Auth.user != undefined) {
                     this.setState({userName: Auth.user.username});
                 }
-            }catch(error){
-                console.error(error);
+
             }
+        }catch(error){
+            console.error(error);
         }
     }
 
