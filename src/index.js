@@ -36,8 +36,8 @@ class App extends React.Component {
             console.log("Redirecting to main page");
             if (Auth.user.attributes != undefined) {
                 this.setState({userName : Auth.user.attributes.email});
-            } else if (Auth.user.name != undefined){
-                this.setState({userName : Auth.user.name});
+            } else if (Auth.user != undefined){
+                this.setState({userName : Auth.user});
             }
         }
     }
