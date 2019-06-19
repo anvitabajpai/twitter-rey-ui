@@ -37,7 +37,7 @@ class App extends React.Component {
             if (Auth.user.attributes != undefined) {
                 this.setState({userName : Auth.user.attributes.email});
             } else if (Auth.user != undefined){
-                this.setState({userName : Auth.user});
+                this.setState({userName : Auth.user.username});
             }
         }
     }
