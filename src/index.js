@@ -23,28 +23,36 @@ class App extends React.Component {
 
     componentWillMount() {
         try {
+            /************ Setting customized userName for Greeting on sign in via federatedSignIn/cognitoUserPoolSignIn ************/
+
             let loggedIn = false
             if (Auth.user) {
 
-                console.log("user object exists");
+                console.log("Authenticated user object exists");
+
                 if (Auth.user.name != undefined) {
+
+                    /********* Federated Sign In ********/
+                    console.log("Via Federated SignIn");
                     this.setState({userName: Auth.user.name});
+
                 } else {
+
+                    /********* Cognito User Pool Sign In ********/
+                    console.log("Via Cognito User Pool SignIn");
                     const {user: {signInUserSession: {accessToken: {payload: {exp, iat}}}}} = Auth;
                     if (iat < exp) {
                         loggedIn = true;
                     }
                     console.log("is logged in", loggedIn);
-                }
-
-            }
-
-            if (loggedIn) {
-                console.log("Redirecting to main page");
-                if (Auth.user.attributes != undefined) {
-                    this.setState({userName: Auth.user.attributes.email});
+                    if (loggedIn) {
+                        if (Auth.user.attributes != undefined) {
+                            this.setState({userName: Auth.user.attributes.email});
+                        }
+                    }
                 }
             }
+
         }catch(error){
             console.error(error);
         }
