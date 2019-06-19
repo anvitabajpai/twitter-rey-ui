@@ -8,10 +8,7 @@ import {store} from './containers/SearchSPA/store';
 import awsMobile from './aws-exports';
 import { withAuthenticator,  Authenticator, Greetings,  SignIn, SignUp, ConfirmSignIn, VerifyContact, ConfirmSignUp, ForgotPassword, RequireNewPassword, Loading } from "aws-amplify-react";
 
-
 Amplify.configure(awsMobile);
-
-var authPromise = Auth.currentAuthenticatedUser();
 
 class App extends React.Component {
     constructor(props) {
